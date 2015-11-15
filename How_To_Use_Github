@@ -1,0 +1,78 @@
+# Using Github for Android.
+
+I advise you to go through the previous tutorial if you haven't already. This tutorial describes how to use github.
+
+1. Navigate to your github profile page. On the right side, you should see an option to create a new repository. 
+2. Give your repository a name e.g SampleRepo, An Optional Description and choose Public Repository (you need credits to create a private repository) and click on Create Repository.
+3. You will shortly see a Quick Setup Page. This is an indication that the remote repository (repo on github) has been created and is ready for use.
+
+For the steps to follow, you should be slightly comfortable with terminal programming. If you aren't, now is the good time to start. 
+Open Git bash, a terminal like window should appear on Microsoft Windows OS or terminal on Linux Ubuntu. 
+
+Listed below are some of the Unix Commands. 
+cd - "Change Directory", cd followed by directory name lets you change your current directory to the directory specified by cd.
+ls - "List all", lists all the file under the present working directory.
+pwd - "Present working directory", lists the current/present working directory. 
+cd .. - "Directory back", goes one step back from the present directory.
+
+If you are getting confused about the commands listed above, do not worry, please follow the rest of the steps. 
+
+4. After opening git bash, navigate to your desktop by typing in the following command on git bash on windows or terminal on ubuntu
+cd Desktop
+
+5. Your path should change. After that make a new directory for your project. This directory will store the local version of your project. 
+type in the command:
+mkdir MyProject 
+This should create a new Directory/folder on your Desktop with the name MyProject. 
+
+6. Navigate to the directory just created. 
+cd MyProject
+
+7. Type in the following git command to initialize an empty git repository.
+git init
+You should see a command that says Initialized an empty git repository "Your_Path"
+
+8. Navigate to the repository that you just created on github, and copy the url of the project, 
+e.g mine looks something like this. 
+https://github.com/skymanaditya1/SampleRepo.git
+
+9. In the directory (in your computer) where you created initialized the empty git repo, type in the command
+git clone followed by the url you just copied, e.g
+git clone https://github.com/skymanaditya1/SampleRepo.git
+It will issue a command saying, you have cloned an empty repository, ignore it and move further. 
+
+10. Next step is move into this repository that you just cloned into your computer. type in the command:
+cd SampleRepo
+
+11. Type in the command "git status" on the terminal. This command is used to synchronize between the local repository and remote repository.
+
+12. Create a new file in this repository and call it helloworld, type in the command
+echo "This is the Hello World Program" > helloworld.txt
+
+13. This command creates the helloworld.txt file on your computer. 
+Type in the command ls and you should be able to see this file. 
+
+14. Type in the command "git status", unlike before it will show the file helloworld.txt in red. It means you haven't yet added this file to the remote server.
+Type in the command "git add helloworld.txt"
+
+15. Type in the command "git status" and it should display the helloworld.txt in green with the label new file
+
+16. Commit this file with the command "git commit -m "Initial hello world program"
+
+17. It should display a command, 1 file has been committed. 
+
+18. Next push this file onto the remote server with the command, 
+git push origin master
+
+19. It will ask for your github username and password, Enter your username and password as they appear. It should then push the file to the remote github server (your online repo)
+
+20. Type in the comman "git status", you should see a command which displays
+On branch master
+
+......
+
+21. Voila, you have created your first hello world project. Navigate to your online github repository if the file has been added to the github repository. 
+
+If you able to implement the above mentioned steps, then you are ready to go ahead with project development using github. 
+
+Github specific command would be discussed in the next tutorial.
