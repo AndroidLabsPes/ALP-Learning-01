@@ -46,7 +46,7 @@ e.g git config --global user.name "Syed Munawwar"
 On Unix Operating System (Ubuntu):
 1. Open the terminal. 
 2. Type in the command sudo apt-get install git
-3. Configure the git settings as descriver before
+3. Configure the git settings as described before
 4. git config --global user.name "Your name"
 5. git config --global user.email "Your email"
 
