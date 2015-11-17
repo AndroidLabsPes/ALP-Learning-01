@@ -32,7 +32,7 @@ On Micorosft Windows OS:
 1. Download git from http://git-scm.com/download/win. Your download starts automatically. Run the Git-***.exe file and follow the steps during the installation. 
 2. If git gets successfully installed on your computer, you can type in the command git --version on the Windows Command Prompt. 
 3. If it displays git version XXX. Then git has been successfully setup on your computer. 
-4. Nexy step is to add your email id and name. Your email address should be same as the one used by you for signing up on github. E.g - my email id is "skymanaditya1@gmail.com" and github username is "skymanaditya1", if you are getting confused with my example consider your friend Rohin, his email address would be "rohinrohin@gmail.com" and his github username is "rohinrohin". 
+4. Next step is to add your email id and name. Your email address should be same as the one used by you for signing up on github. E.g - my email id is "skymanaditya1@gmail.com" and github username is "skymanaditya1", if you are getting confused with my example consider your friend Rohin, his email address would be "rohinrohin@gmail.com" and his github username is "rohinrohin". 
 5. If you have installed git successfully then you should be able to see git bash as a new software on your computer. You can do this step either using the Command Prompt (CMD for short) or git bash. I recommend using git bash.
 Type in the following commands using any of the above (on the terminal):
 git config --global user.name "Your name"
