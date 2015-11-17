@@ -1,0 +1,215 @@
+# If you have followed the previous tutorial into how to use github, this should not be much of a challenge. 
+
+To Check if you have setup git properly on your system, open Git Bash for Microsoft Windows Users and Terminal for Linux Ubuntu Users.
+Type in the following command, 
+git config user.name 
+git config user.email
+
+If these two commands display your name and email address, then you have successfully setup github with your account on your computer. 
+
+So let's start by creating a github repository. 
+1. Navigate to your github page, http://www.github.com, sign in with your credentials. 
+2. Click on New Repository to create a new repository, It should display a "Create a new repository" Page.
+3. Let's give the Repository a name. I will call it "MyFirstJavaCode" without the quotes. 
+4. I will provide the following description: This repository houses my first java code committed on gitub (apologies to people who have used github before already). 
+5. The repository would be public and I would initialie it with a README. i.e I will check the box which says
+"Initialize this repository with README".
+6. Click on Create Repository.
+
+Note: A README is a file that contains the detailed description of your project, you can edit the README file later once you have some code in your repo. 
+
+At this point of time, github has done two things for you, 
+1. It has created the repository called "MyFirstJavaCode" and starts with you as the admin. 
+2. It assigns your repository a unique URL (Uniform Resource Locator), please read this if you have issues regarding what is url -> https://docs.oracle.com/javase/tutorial/networking/urls/definition.html
+
+The url is unique to your repository and is the filed with which github associates your repository on its servers. (Think of the servers now as computer machines with huge processing power).
+Note this url somewhere for later use.
+
+7. Now you have created the repository online, this is called the remote repository. 
+8. Let's create some space for the repository on your PC. 
+9. Start by opening up the Git Bash on Microsoft Windows or Terminal on Linux Ubuntu. 
+
+On Microsoft Windows Terminal type in the following commands. 
+cd Desktop
+mkdir FirstRepo
+cd FirstRepo
+git init (This command initializes an empty git repository)
+git clone "URL_Name" (In my case I will type the command, git clone "https://github.com/skymanaditya1/MyFirstJavaCode.git", this is the same URL you noted before)
+
+This clones the remote repository on your local computer. If you type in the command ls
+You should be able to see a new Folder called MyFirstJavaCode. 
+
+Type in the command
+cd MyFirstJavaCode 
+and Voila, you have the local repository setup on your machine. 
+
+On Ubuntu Terminal, type in the following commands
+cd Desktop
+mkdir FirstRepo
+cd FirstRepo
+git clone "https://github.com/skymanaditya1/MyFirstJavaCode.git" (Please change it to your URL).
+
+Type in the command
+ls
+You should see a new directory, 
+cd MyFirstJavaCode
+
+10. Type in the command, git status, 
+You should see a nice command, saying on master, nothing to commit, it means you are good to go.
+
+11. Let's start by creating a Java Program. Create a new Java file in this directory, on my computer it looks something like this 
+c/Users/Aditya/Desktop/MyFirstJavaCode. 
+Let's call it, FirstJavaCode.java, type in the following Java Program
+
+-----------------------------------------------------
+import java.util.Scanner;
+
+public class FirstJavaCode{
+  public static void main(String[] args){
+    Scanner in = new Scanner(System.in);
+    System.out.println("Enter your name:");
+    String myName = in.nextLine();
+    System.out.println("Hello Earthling "+myName);
+    in.close(); //Optional Line, you may or may not type it. It is good practice to type it. 
+  }
+}
+-----------------------------------------------------
+
+Now type in the command in the terminal/git bash
+ls
+You should see a new file FirstJavaCode.java
+
+You have to push this file to the remote server from your local computer. 
+Type in the command, 
+git status
+You should see the terminal displaying a message like, you have untracked files, add files to commit, 
+That's nasty, right:
+Let's get rid of this error message (although it is not an error message)
+
+12. Type in the commands
+git add FirstJavaCode.java
+
+This adds the java file to the local repository buffer (let's forget about that for now).
+13. Type in the command
+git commit -m "This is my first Java Code"
+(This is the message that appears with the commit). 
+
+Before we proceed, every time you commit a change, you commit it with a commit message. A commit message tells you what you have committed.
+
+14. Type in the command
+git status
+You should see everything in green, this means that you are ready to push the file to the remote github server. 
+
+Before that, take a quick peak at your github repository. You still don't see the FirstJavaCode.java don't you. 
+That's because we haven't yet pushed the file to the server. 
+
+15. Type in the command
+git push origin master
+(Type in the username and password of your git account).
+
+A cool list of lines appear, this pushes the file to the server. Just take a sneak peak at your github repository. 
+IF YOU HAVE FOLLOWED ALL THE STEPS CORRECTLY - Voila, you should see the FirstJavaCode.java file on the remote server. 
+
+Great!!!
+
+16. Now let's get serious, "I have mentioned that github is a collaborative framework, but nowhere you see other people contributing". 
+
+There are two ways to contribute to a project / repository hosted on github. 
+1. You are given write permission (Made part of the organization). 
+2. You fork a project and open a pull request.
+
+Beware! Nerd Alert. The above two lines are highly cryptic, I will break them down for you. Let's start with the 2nd case first.
+
+Suppose you would like to contribute to my java repository, which has the following url -> https://www.github.com/skymanaditya1/MyFirstJavaCode
+
+You cannot contribute to the repository as such (since you don't have admin access), you start by forking the project. 
+17. On the top right corner you should see a Button (looks like a Y) which says Fork. Press that button. It will fork the repository for you to your gitub account. 
+This will be your version of the project. Changes to this repo made you would not be reflected in the original repository until you create a "Pull Request" (we will talk about it later).
+
+18. It takes a few seconds to fork the repository, once it is done you are ready with your version of the repository. 
+As you note down now, the repository has a new URL e.g, If i fork using Animesh Sahay's account it will appear as https://github.com/animeshsahay/MyFirstJavaCode.git
+
+Clone this as before. 
+Open terminal, cd to the desired path and type in the command.
+19. git init
+git clone https://github.com/animeshsahay/MyFirstJavaCode.git
+
+20. Let's add a new java file to this directory. Let's call it SecondJavaProgram.java
+
+-----------------------------------------------------
+import java.util.Scanner;
+
+public class SecondJavaProgram{
+  public static void main(String[] args){
+    Scanner in = new Scanner(System.in);
+    System.out.println("What is your favourite number");
+    int favNumber = in.nextInt(); // My favourite is 9
+    System.out.println("Your favourite number is :"+favNumber);
+    in.close();
+  }
+}
+-----------------------------------------------------
+
+21. Add, commit and push this file as before
+git add SecondJavaProgram.java
+git commit -m "Second Java program"
+git push origin master
+(Enter your git username and password)
+
+22. You would now want your friend to accept the changes you have made to the project / repository. You would start by creating a pull request. 
+So let's create a pull request. (Pull request is a notification to the owner of the project, that you would like to add your changes to his repository).
+
+23. Click on the Pull Request button, it will open a page that says "Comparing Changes"
+If it displays Able to merge, then you are good to go, Click on the "Create pull request" button. Add a subject line accurately describing what you are adding and leave a comment. 
+
+Click on "Create pull request"
+
+24. The concerned person receives notification that you would like to add your changes. They will see this in the notifications. 
+They can accept your changes, by creating the Merge pull request. Confirm merge. Now the owner of the repo will be able to see your changes. 
+"That is how you collaborate on projects"
+
+25. Second way is to add a person as a collaborator in the organization. In this fashion they will directly be able to contribute (make or add changes) to your repository. 
+Although this seems convenient, it might be dangerous if not properly used. 
+
+26. Suppose that Syed Munawwar would like me (Aditya Agarwal) to contribute to his repository. He will navigate to his repository. 
+On the Settings Tab, Click on the Collaborators Tab. 
+It will give the ooption of adding a person by his username, full name or email address. Enter any of the fields above and you can provide him with member (read) or admin (write) access.
+They can contribute to the organization just like before. 
+
+27. If you changes on the remote repository that you would like to pull to the local repository, simply navigate to the repository on the computer. 
+And type in the command
+git pull origin master
+This pulls the latest build of the project from the remote repo on github. 
+
+28. Let's now talk about creating branch
+While developing any major software, it has two parts (in an abstract manner). 
+Backbone project (Stable version)
+Project under development (Beta version)
+
+Usually while working on a module that is under development, changes made / added are not done to the backbone project (stable version), 
+but are instead added to the beta version. 
+This is done by creating a branch. Suppose that you would like to work on a module that is under development. 
+You won't push your changes unless have are bug free and are tested several times. To do that you create a branch
+
+29. Suppose I would like to work on a different branch for my project. (by default the branch is master)
+I would type in the commands
+cd Desktop/MyFirstJavaCode
+git branch otherBranch
+--This creates a new branch otherBranch--
+I can switch to this branch by typing in the command
+git checkout otherBranch
+--It will issue a command saying, branch changed to otherBranch--
+
+30. This branch will have everything till the last commit made in the master branch. i.e it will be a copy of the master branch the first time you create it.
+Make some changes to this branch (developmental code). The changes won't be reflected in the main branch. 
+
+Once you are sure of the code that you have written in the otherBranch is ready to be merged with the master branch, you type in the command.
+Swich to your main branch first by typing.
+
+31. git checkout master
+then type in the following command
+git merge otherBranch
+
+32. This merges the contents of the otherBranch with the master branch.
+
+If you have followed the steps correctly, then you are ready for collaborating on Android Projects using Github.
