@@ -1,3 +1,6 @@
+Restrictions : Team Size : 15
+Java Functional Code (Android Implementation)
+
 1. Name	    :	Shivasakthi S V
    Username : 	shivasv97
 
@@ -30,3 +33,6 @@
 
 11. Name     :	Ruthwik Ganesh
     Username : 	ruthwik1
+    
+12. Name     :    Nikita Metha
+    Username :    nikitametha
