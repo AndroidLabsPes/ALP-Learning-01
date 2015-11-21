@@ -1,5 +1,8 @@
 1. Name     : 	Manvi Agarwal
    Username : 	manviagarwal
 
-2. Name	    : 	Rahul Maru
+2. Name	   : 	Rahul Maru
    Username : 	RahulMaru1318
+   
+3. Name     :  Soumya Pandit
+   Username :  SoumyaPandit
