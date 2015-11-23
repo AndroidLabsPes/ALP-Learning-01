@@ -1,25 +1,25 @@
 Restrictions : Team Size : 15
 Java Functional Code (Android Implementation)
 
-1. Name	    :	Shivasakthi S V
+1. Name	   :	Shivasakthi S V
    Username : 	shivasv97
 
 2. Name     : 	Tulika Sureka
    Username :   tulikaiam
 
-3. Name	    :   Abhijay Gupta
+3. Name	   :  Abhijay Gupta
    Username : 	abhijay12
 
-4. Name	    : 	Shreya V Shetty
+4. Name	   : 	Shreya V Shetty
    Username : 	shreyavshetty
 
-5. Name	    : 	Rahul Maru
+5. Name	   : 	Rahul Mohan
    Username : 	RahulMaru1318
 
 6. Name     : 	Niharika Misra
    Username : 	niharikaiam
 
-7. Name	    : 	Tanya Mehrotra
+7. Name	   :  Tanya Mehrotra
    Username : 	tanya001
 
 8. Name     : 	Swathi Krishnan
@@ -31,7 +31,7 @@ Java Functional Code (Android Implementation)
 10. Name     : 	Isha Arora
     Username : 	ishaiam
 
-11. Name     :	Ruthwik Ganesh
+11. Name     :	   Ruthwik Ganesh
     Username : 	ruthwik1
     
 12. Name     :    Nikita Metha
